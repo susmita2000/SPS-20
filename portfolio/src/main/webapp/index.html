@@ -1,18 +1,177 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-  </head>
-  <body>
-    <div id="content">
-      <h1>My Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
+		<html>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r83/three.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.2/dat.gui.js"></script>   
+
+    <link rel="stylesheet" href="style.css">  
+
+    <head >
+<nav class="navbar navbar-inverse" style="z-index: 80;position: fixed;width: 100%;margin-bottom: 5%;">
+  <div class="container-fluid" >
+    <div class="navbar-header " >
+      <a class="navbar-brand" href="#">Hey there ! Welcome to my page. Keep scrolling to know more about me...</a>
     </div>
-  </body>
+    <ul class="nav navbar-nav">
+      
+      
+    </ul>
+  </div>
+</nav>
+</head>
+<body>
+<div class="landscape"></div>
+<div class="filter" ></div>
+
+<canvas id="canvas"  >
+
+</canvas>
+<div class="conta"  style="position: absolute;top: 10%;">
+	
+<div id="section1" class="container-fluid" style="z-index: 50;">
+  <div class="row">
+    <div class="col-sm-6" style="margin-top: 5%;font-weight: 400;font-family: cursive;">
+Hey! I am Susmita, a pre-final yearite at IIT Kharagpur, majoring in Electronics and Electrical Communication Engineering . My areas of interest include Machine learning and Web Development. I have a myriad of hobbies , dancing, watching web series and swimming being some of them. My wanderlust often carries my mind to exotic places around the globe which I hope to visit once I make enough money.
+    </div>
+    <div class="col-sm-6">
+      <img src="/image/port2.jpeg" alt="pic" style="width: 40%;border-radius: 50%;">   
+    </div>
+  </div>
+</div>
+  
+
+
+
+<div id="section2" class="container-fluid" style="z-index: 50;position: relative;bottom: 0;">
+  <h1 style="font-size: 8vh;">My Skills</h1>
+  <center><i class="fa fa-cog fa-spin" style="font-size:5.5vh"></i></center>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel" style="margin-top:5%;">
+    <!-- Indicators -->
+    <ol class="carousel-indicators" style="position: relative;bottom:  10%;">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+      	<center>
+         <div class="row" style="width: 95%;">
+    <div class="col-sm-3" ><i class='fab fa-html5' style='font-size:17vh;'></i></div>
+    <div class="col-sm-3" ><i class='fab fa-css3' style='font-size:17vh;'></i></div>
+    <div class="col-sm-3"><i class='fab fa-php' style='font-size:17vh;'></i></div>
+    <div class="col-sm-3"><i class='fab fa-js' style='font-size:17vh;'></i></div>
+  </div>
+</center>
+
+
+
+      </div>
+
+      <div class="item">
+       <center><div class="row" style="width: 95%;">
+          <div class="col-sm-3" ><i class='fab fa-react' style='font-size:17vh;'></i></div>
+    <div class="col-sm-3" ><i class='fab fa-python' style='font-size:17vh;'></i></div>
+    <div class="col-sm-3"><i class='fab fa-github' style='font-size:17vh;'></i></div>
+    <div class="col-sm-3"><i class='fab fa-java' style='font-size:17vh;'></i></div>
+  </div></center>
+      </div>
+    
+   
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+
+
+
+
+
+
+<div id="section3" class="container-fluid" style="z-index: 50;">
+  <h1>My Recent Works</h1>
+  <center><i class='fas fa-tools' style='font-size:5.5vh'></i></center>
+  <div class="row" style="font-weight: 400;">
+  <div class="col-sm-4" >
+  <div class="card ">
+      <div class="card-body text-center" style="height: 55%;">
+      	<h2 style="background-color: #1a1a1a;">Web Development</h2>
+        <p class="card-text" style="font-size: 18px;">Being a part of Spring Fest Web Team, I developed the Nation Wide Prelims website for Spring Fest 2020 for the registration of participants of other colleges in various cultural events.I also designed and developed the online treasure hunt event, Labyrinth held during Spring Fest 2020 .
+</p>
+      </div>
+    </div>
+</div>
+  <div class="col-sm-4" >
+  <div class="card "  >
+      <div class="card-body text-center" style="height: 55%;">
+      	<h2 style="background-color: #1a1a1a;"> Data Analytics</h2>
+        <p class="card-text" style="font-size: 18px;">I was a part of the bronze winning team of Data Analytics,Technology General Championship 2020, IIT Kharagpur.The problem statement required meter reading prediction of some corporate buildings from meter readings of previous 8 months.After processing the data and developing new features,we used ensemble models and LSTM for prediction. </p>
+      </div>
+    </div>
+</div>
+  <div class="col-sm-4" >
+  <div class="card ">
+      <div class="card-body text-center" style="height: 55%;">
+      	<h2 style="background-color: #1a1a1a;">Deep Learning</h2>
+        <p class="card-text" style="font-size: 18px;">The objective of this project is accelerating virtual screening of drugs for SARS-CoV-2 and developing novel variations of existing drugs by leveraging artificial intelligence and Cheminformatics packages developed in python like RDKit , DeepChem and PubChempy.</p>
+      </div>
+    </div>
+</div>
+</div>
+ 
+</div>
+<div class="contact" style="background-color: transparent;height: 100px;margin-top: 3%;">
+	
+<footer class="footer-distributed">
+
+			<div class="footer-left">
+
+				<h3 style="margin-bottom: 10%;">Made with love <i class="fa fa-heart" aria-hidden="true"></i></h3>
+				
+				<a href="#"><i class='fa fa-facebook-square' style='font-size:8.5vh;margin-right: 10%;'></i></a>
+					
+					<a href="#"><i class="fa fa-linkedin" style='font-size:8.5vh;margin-right: 10%;'></i></a>
+					<a href="#"><i class="fa fa-github" style='font-size:8.5vh;margin-right: 10%;'></i></a>
+
+				</div>
+
+			<div class="footer-right">
+
+				<h3>Contact Me</h3>
+
+				<form action="#" method="post">
+
+					<input type="text" name="email" placeholder="Email">
+					<textarea name="message" placeholder="Message"></textarea>
+					<button>Send</button>
+
+				</form>
+
+			</div>
+
+		</footer>
+	</div>
+</div>
+
+</body>
 </html>
+	<script src="script.js"></script>	
