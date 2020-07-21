@@ -205,3 +205,35 @@ function drawIfMouseMoving(){
 function degToRad(deg) {
 	return deg * (Math.PI / 180);
 }
+
+
+
+
+function loadComments() {
+  fetch('/data2').then(response => response.json()).then((comments) => {
+    const commentListElement = document.getElementById('comment-list');
+    comments.forEach((comment) => {
+      commentListElement.appendChild(createTaskElement(comment));
+    })
+  });
+}
+
+/** Creates an element that represents a task, including its delete button. */
+function createTaskElement(com) {
+  const comElement = document.createElement('div');
+  comElement.className = 'comment';
+
+  const nameElement = document.createElement('span');
+  nameElement.innerText = com.name;
+   const commentElement = document.createElement('div');
+  commentElement.innerText = com.message;
+
+
+
+  comElement.appendChild(nameElement);
+  comElement.appendChild(commentElement);
+  return comElement;
+}
+
+
+
